@@ -81,7 +81,7 @@ int main()
     int cont = 0; // contador
     int veneno = 0; // habilidade da classe assassino
 
-    //funÁıes mais importantes \/
+    //fun√ß√µes mais importantes \/
 
     int porcentagem()
     {
@@ -131,7 +131,7 @@ int main()
             dano = dano * 0.85;
         }
 
-        //verificando se o player est· com a defesa ativa e se conseguio se defender
+        //verificando se o player est√° com a defesa ativa e se conseguio se defender
         if(defesa == 0 || ale <= 50)
         {
 
@@ -146,7 +146,7 @@ int main()
             if(ale <= 10)
             {
                 textcolor(14);
-                textoSequencial("DANO CRITÕCO!!!\n", 75000);
+                textoSequencial("DANO CRIT√çCO!!!\n", 75000);
                 printf("%d ", dano);
                 textoSequencial("x 2...\n", 80000);
                 dano = dano * 2;
@@ -155,9 +155,9 @@ int main()
             }
 
             textcolor(4);
-            textoSequencial("Voce perdeu ", 50000);
+            textoSequencial("Boss causou ", 50000);
             printf("%d ", dano);
-            textoSequencial("de vida \n", 50000);
+            textoSequencial("de dano a voc√™\n", 50000);
 
             vidaP -= dano;
 
@@ -169,7 +169,7 @@ int main()
             textcolor(6);
             textoSequencial("BLOQUEIO!\n\n", 75000);
         }
-        //FunÁ„o responsavel por caucular e imprimir o dano causado ao jogador pelo boss
+        //Fun√ß√£o responsavel por caucular e imprimir o dano causado ao jogador pelo boss
     }
 
     int danoAoBoss()
@@ -179,7 +179,7 @@ int main()
         if(ale <= 10)
         {
             textcolor(14);
-            textoSequencial("DANO CRÕTICO!!!\n", 75000);
+            textoSequencial("DANO CR√çTICO!!!\n", 75000);
             printf("%d ", dano);
             textoSequencial("x 2...\n", 80000);
             dano = dano * 2;
@@ -188,7 +188,7 @@ int main()
         }
 
         textcolor(4);
-        textoSequencial("Voce causou ", 50000);
+        textoSequencial("Voc√™ causou ", 50000);
         printf("%d ", dano);
         textoSequencial("de dano ao boss \n", 50000);
 
@@ -202,14 +202,14 @@ int main()
             textoSequencial("Redobrando guarda!\n\n", 60000);
         }
 
-        //FunÁ„o responsavel por caucular e imprimir o dano causado ao boss pelo jogador
+        //Fun√ß√£o responsavel por caucular e imprimir o dano causado ao boss pelo jogador
     }
 
     int curaAoPlayer()
     {
 
         textcolor(9);
-        textoSequencial("Voce recuperou ", 50000);
+        textoSequencial("Voc√™ recuperou ", 50000);
         printf("%d ", cura);
         textoSequencial("de vida \n", 50000);
 
@@ -218,17 +218,17 @@ int main()
         if(vidaP > 1100 && escolhaclasse == 1)
         {
             vidaP = 1100;
-            textoSequencial("Vida m·xima obtida!\n", 50000);
+            textoSequencial("Vida m√°xima obtida!\n", 50000);
         }
         else if(vidaP > 750 && escolhaclasse == 2)
         {
             vidaP = 750;
-            textoSequencial("Vida m·xima obtida!\n", 50000);
+            textoSequencial("Vida m√°xima obtida!\n", 50000);
         }
         else if(vidaP > 975 && escolhaclasse == 3)
         {
             vidaP = 975;
-            textoSequencial("Vida m·xima obtida!\n", 50000);
+            textoSequencial("Vida m√°xima obtida!\n", 50000);
         }
 
         MostrarQuantVida();
@@ -309,7 +309,7 @@ int main()
         else if(vidaP < 975 && escolhaclasse == 3)
         {
             min = 1;
-            max = 3;
+            max = 5;
 
             textcolor(14);
             textoSequencial("\nCura passiva:\n", 50000);
@@ -431,7 +431,7 @@ int main()
         textoSequencial("-> 1 | (40 - 80)      dano     | Corte razo          | (90% de chance)   \n", 990);
         textoSequencial("-> 2 | (30 - 100)     dano     | Arremesso de adaga  | (72% de chance)   \n", 990);
         textoSequencial("-> 3 | (45 - 55)      dano     | Corte Triplo (x3)   | (60% de chance)   \n", 990);
-        textoSequencial("-> 4 | (50 - 75) dano & cura   | Drenagem de vida    | (51% de chance)   \n", 990);
+        textoSequencial("-> 4 | (25 - 75) dano & cura   | Drenagem de vida    | (54% de chance)   \n", 990);
         textoSequencial("-> 5 | (50) dano & veneno(70%) | Corte envenenado    | (45% de chance)   \n\n", 990);
     }
 
@@ -529,11 +529,11 @@ int main()
         porcentagem();
 
         //DANO || CURA, minimo e maximo
-        min = 50;
+        min = 25;
         max = 75;
 
         //CHANCE DE ACERTAR
-        if(ale <= 51)
+        if(ale <= 54)
         {
 
             textcolor(11);
@@ -571,14 +571,14 @@ int main()
 
             if(veneno > 3){
                 veneno = 3;
-                textoSequencial("veneno m·ximo j· atingido!\n", 75000);
+                textoSequencial("veneno m√°ximo j√° atingido!\n", 75000);
             }
 
             dano = 50;
             danoAoBoss();
 
             textcolor(2);
-            textoSequencial("(+ 1) Boss est· envenenado!\n\n", 50000);
+            textoSequencial("(+ 1) Boss est√° envenenado!\n\n", 50000);
         }
         else
         {
@@ -613,7 +613,7 @@ int main()
         }
         else
         {
-            textoSequencial("Essa opÁ„o nao existe, tente novamente: ", 50000);
+            textoSequencial("Essa op√ß√£o nao existe, tente novamente: ", 50000);
             scanf("%d", &escolha);
             ChancesClasse_Assassino();
         }
@@ -796,7 +796,7 @@ int main()
         }
         else
         {
-            textoSequencial("Essa opÁ„o nao existe, tente novamente: ", 50000);
+            textoSequencial("Essa op√ß√£o nao existe, tente novamente: ", 50000);
             scanf("%d", &escolha);
             ChancesClasse_Cavaleiro();
         }
@@ -812,7 +812,7 @@ int main()
         textoSequencial("-> 1 | (55)           dano     | Tiro Preciso        | (98% de chance)   \n", 990);
         textoSequencial("-> 2 | (80 - 115)     dano     | Arremesso de faca   | (68% de chance)   \n", 990);
         textoSequencial("-> 3 | (125 - 175)    dano     | Tiro na cabeca      | (53% de chance)   \n", 990);
-        textoSequencial("-> 4 | (90 - 100)     cura     | CafÈ Preto          | (51% de chance)   \n", 990);
+        textoSequencial("-> 4 | (90 - 100)     cura     | Caf√© Preto          | (51% de chance)   \n", 990);
         textoSequencial("-> 5 | (30 - 70)      dano     | 6 tiros (x6)        | (45% de chance)   \n\n", 990);
     }
 
@@ -981,7 +981,7 @@ int main()
         }
         else
         {
-            textoSequencial("Essa opÁ„o nao existe, tente novamente: ", 50000);
+            textoSequencial("Essa op√ß√£o nao existe, tente novamente: ", 50000);
             scanf("%d", &escolha);
             ChancesClasse_Pistoleiro();
         }
@@ -1034,8 +1034,8 @@ int main()
         textcolor(15);
 
         textoSequencial("Quantidade (min e max):  | Nome do ataque:    | Chance de sucesso:\n", 990);
-        textoSequencial("(25 - 80)    dano        | SequÍncia de socos | (94% de chance)\n", 990);
-        textoSequencial("(0 - 150)    dano        | MaldiÁ„o           | (82% de chance)\n", 990);
+        textoSequencial("(25 - 80)    dano        | Sequ√™ncia de socos | (94% de chance)\n", 990);
+        textoSequencial("(0 - 150)    dano        | Maldi√ß√£o           | (82% de chance)\n", 990);
         textoSequencial("(100 - 150)  cura        | Cura mistica       | (31% de chance)\n", 990);
         textoSequencial("(175 - 240)  dano        | Enfincada maligna  | (26% de chance)\n", 990);
         textoSequencial("(75 - 125)   dano & cura | Roubo de vida      | (25% de chance)\n", 990);
@@ -1086,7 +1086,7 @@ int main()
         textcolor(6);
         textoSequencial("\nHABILIDADE UTILIZADA: ", 70000);
         textcolor(9);
-        textoSequencial("MaldiÁ„o\n", 85000);
+        textoSequencial("Maldi√ß√£o\n", 85000);
 
         //CHANCE DE ACERTAR
         if(ale <= 82)
@@ -1222,7 +1222,7 @@ int main()
         escolhaBoss = GeradorRandomico(min, max);
     }
 
-    // Chances de acerto e funÁ„o do turno do BOSS
+    // Chances de acerto e fun√ß√£o do turno do BOSS
 
     int EscolhaChancesBoss()
     {
@@ -1276,8 +1276,8 @@ int main()
         {
 
             textcolor(11);
-            textoSequencial("\nVocÍ vai jogar um jogo baseado em estr·tegia e muita sorte onde vocÍ vai enfrentar um inimigo desafiador\n...", 60000);
-            textoSequencial("Bom agora que eu te expliquei o conceito do jogo vou te mostrar as opÁıes de classes e habilidades do Boss:\n\n", 50000);
+            textoSequencial("\nVoc√™ vai jogar um jogo baseado em estr√°tegia e muita sorte onde voc√™ vai enfrentar um inimigo desafiador\n...", 60000);
+            textoSequencial("Bom agora que eu te expliquei o conceito do jogo vou te mostrar as op√ß√µes de classes e habilidades do Boss:\n\n", 50000);
 
             textoSequencial("...\n\n", 90000);
 
@@ -1289,14 +1289,14 @@ int main()
             TabelaDeHabilidadesClasse_Cavaleiro();
 
             textcolor(2);
-            textoSequencial("(VIDA M¡XIMA DO CAVALEIRO: 1100)\n\n", 50000);
+            textoSequencial("(VIDA M√ÅXIMA DO CAVALEIRO: 1100)\n\n", 50000);
 
             textcolor(11);
-            textoSequencial("AlÈm dessas habilidades o Caveleiro possui uma habilidade passiva de cura que È ativada no inÌcio de cada\n", 50000);
-            textoSequencial("turno quando o Cavaleiro n„o est· com a vida m·xima: ", 50000);
+            textoSequencial("Al√©m dessas habilidades o Caveleiro possui uma habilidade passiva de cura que √© ativada no in√≠cio de cada\n", 50000);
+            textoSequencial("turno quando o Cavaleiro n√£o est√° com a vida m√°xima: ", 50000);
             textoSequencial("(1 - 5) <- cura.\n\n", 50000);
 
-            textoSequencial("A habilidade de 'USO 5' tem um diferencial que se acertada permite que o Cavaleiro tenha uma chance de 50% \nde bloquear o prÛximo ataque do Boss caso ele acerte.\n\n", 50000);
+            textoSequencial("A habilidade de 'USO 5' tem um diferencial que se acertada permite que o Cavaleiro tenha uma chance de 50% \nde bloquear o pr√≥ximo ataque do Boss caso ele acerte.\n\n", 50000);
 
             //---------------------------------------------------------------------------------------------------------------------------
 
@@ -1306,14 +1306,14 @@ int main()
             TabelaDeHabilidadesClasse_Pistoleiro();
 
             textcolor(2);
-            textoSequencial("(VIDA M¡XIMA DO PISTOLEIRO: 750)\n\n", 50000);
+            textoSequencial("(VIDA M√ÅXIMA DO PISTOLEIRO: 750)\n\n", 50000);
 
             textcolor(11);
-            textoSequencial("AlÈm dessas habilidades o Pistoleiro possui uma habilidade passiva de cura que È ativada no inÌcio de cada\n", 50000);
-            textoSequencial("turno quando o Pistoleiro n„o est· com a vida m·xima: ", 50000);
+            textoSequencial("Al√©m dessas habilidades o Pistoleiro possui uma habilidade passiva de cura que √© ativada no in√≠cio de cada\n", 50000);
+            textoSequencial("turno quando o Pistoleiro n√£o est√° com a vida m√°xima: ", 50000);
             textoSequencial("(5 - 10) <- cura.\n\n", 50000);
 
-            textoSequencial("A habilidade de 'USO 5' tem um diferencial que permite ao Pistoleiro efetuar v·rios ataques em um sÛ turno.\n\n", 50000);
+            textoSequencial("A habilidade de 'USO 5' tem um diferencial que permite ao Pistoleiro efetuar v√°rios ataques em um s√≥ turno.\n\n", 50000);
 
             //---------------------------------------------------------------------------------------------------------------------------
 
@@ -1323,27 +1323,27 @@ int main()
             TabelaDeHabilidadesClasse_Assassino();
 
             textcolor(2);
-            textoSequencial("(VIDA M¡XIMA DO ASSASSINO: 975)\n\n", 50000);
+            textoSequencial("(VIDA M√ÅXIMA DO ASSASSINO: 975)\n\n", 50000);
 
             textcolor(11);
-            textoSequencial("AlÈm dessas habilidades o Assassino possui uma habilidade passiva de cura que È ativada no inÌcio de cada\n", 50000);
-            textoSequencial("turno quando o Pistoleiro n„o est· com a vida m·xima: ", 50000);
-            textoSequencial("(1 - 3) <- cura.\n\n", 50000);
+            textoSequencial("Al√©m dessas habilidades o Assassino possui uma habilidade passiva de cura que √© ativada no in√≠cio de cada\n", 50000);
+            textoSequencial("turno quando o Pistoleiro n√£o est√° com a vida m√°xima: ", 50000);
+            textoSequencial("(1 - 5) <- cura.\n\n", 50000);
 
-            textoSequencial("A habilidade de 'USO 3' tem um diferencial que permite ao Assassino efetuar v·rios ataques em um sÛ turno.\n\n", 50000);
+            textoSequencial("A habilidade de 'USO 3' tem um diferencial que permite ao Assassino efetuar v√°rios ataques em um s√≥ turno.\n\n", 50000);
 
-            textoSequencial("A habilidade de 'USO 5' tem um diferencial que se acertada permite ao Assassino alÈm de causar dano e tambÈm\n causar +1 de envenenamento com 70% de chance do veneno n„o ser anulado apÛs causar dano.\n\n", 50000);
+            textoSequencial("A habilidade de 'USO 5' tem um diferencial que se acertada permite ao Assassino al√©m de causar dano e tamb√©m\n causar +1 de envenenamento com 70% de chance do veneno n√£o ser anulado ap√≥s causar dano.\n\n", 50000);
 
             textcolor(2);
-            textoSequencial("O veneno tem 3 nÌveis e tem uma chance de ser anulado perdendo um nÌvel. Cada nÌvel causa um dano e efeitos\n", 50000);
-            textoSequencial("negativos que v„o ficando mais eficases a cada nÌvel:\n\n", 50000);
+            textoSequencial("O veneno tem 3 n√≠veis e tem uma chance de ser anulado perdendo um n√≠vel. Cada n√≠vel causa um dano e efeitos\n", 50000);
+            textoSequencial("negativos que v√£o ficando mais eficases a cada n√≠vel:\n\n", 50000);
             textoSequencial("envenenamento 1: (05 - 30) <- dano || (20%) <- cura perdida (boss) || (05%) <- dano perdido (boss)\n", 50000);
             textoSequencial("envenenamento 2: (10 - 35) <- dano || (25%) <- cura perdida (boss) || (10%) <- dano perdido (boss)\n", 50000);
             textoSequencial("envenenamento 3: (15 - 40) <- dano || (30%) <- cura perdida (boss) || (15%) <- dano perdido (boss)\n\n", 50000);
             //---------------------------------------------------------------------------------------------------------------------------
 
             textcolor(14);
-            textoSequencial("cada vez que acertar um ataque no inimigo estando com qualquer classe vocÍ tem 10% de chance de causar um \ndano crÌtico podendo dobrar todo dano!\n\n", 50000);
+            textoSequencial("cada vez que acertar um ataque no inimigo estando com qualquer classe voc√™ tem 10% de chance de causar um \ndano cr√≠tico podendo dobrar todo dano!\n\n", 50000);
 
             textcolor(6);
             textoSequencial("HABILIDADES DO BOSS:\n", 30000);
@@ -1351,10 +1351,10 @@ int main()
             TabelaDeHabilidadesBoss();
 
             textcolor(2);
-            textoSequencial("\n(VIDA M¡XIMA DO BOSS: 1750)\n", 50000);
+            textoSequencial("\n(VIDA M√ÅXIMA DO BOSS: 1750)\n", 50000);
 
             textcolor(11);
-            textoSequencial("\nO Boss pode causar dano crÌtico com a mesma intencidade e chance ao jogador.\n", 50000);
+            textoSequencial("\nO Boss pode causar dano cr√≠tico com a mesma intencidade e chance ao jogador.\n", 50000);
 
         }
     }
@@ -1375,11 +1375,11 @@ int main()
     if(escolhaclasse > 3 || escolhaclasse < 1)
     {
         textcolor(12);
-        textoSequencial("\n\nVOC  EST¡ DE BRINCADEIRA N…?!?!?!?!\n", 50000);
+        textoSequencial("\n\nVOC√ä EST√Å DE BRINCADEIRA N√â?!?!?!?!\n", 50000);
         textoSequencial("ADEUS! VOU ENCERRAR O JOGO!!!!", 70000);
 
         textcolor(6);
-        textoSequencial("\n\n\nFIM DE JOGO... \nVERS√O DO JOGO: 2.6\nCriado em linguagem C feito por Gabriel Miguel Haslinger.\n\nencerrando sess„o.", 50000);
+        textoSequencial("\n\n\nFIM DE JOGO... \nVERS√ÉO DO JOGO: 2.6\nCriado em linguagem C feito por Gabriel Miguel Haslinger.\n\nencerrando sess√£o.", 50000);
 
         return 0;
     }
@@ -1389,7 +1389,7 @@ int main()
         textcolor(11);
         textoSequencial("\n\nBOSS: ", 70000);
         textcolor(15);
-        textoSequencial("parece que vocÍ derrotou meus lacaios e chegou atÈ aqui, certamente vocÍ n„o teme pela prÛpria vida!", 55000);
+        textoSequencial("parece que voc√™ derrotou meus lacaios e chegou at√© aqui, certamente voc√™ n√£o teme pela pr√≥pria vida!", 55000);
 
         if(escolhaclasse == 1)
         {
@@ -1399,7 +1399,7 @@ int main()
             textcolor(11);
             textoSequencial("\n\nCAVALEIRO: ", 70000);
             textcolor(15);
-            textoSequencial("Eu vingarei minha famÌlia mesmo que isso me custe a VIDA!", 55000);
+            textoSequencial("Eu vingarei minha fam√≠lia mesmo que isso me custe a VIDA!", 55000);
 
         }
         else if(escolhaclasse == 2)
@@ -1410,7 +1410,7 @@ int main()
             textcolor(11);
             textoSequencial("\n\nPISTOLEIRO: ", 70000);
             textcolor(15);
-            textoSequencial("Eu literalmente enchi seus guardas de bala, ent„o por que acha que com vocÍ vai ser diferente?", 55000);
+            textoSequencial("Eu literalmente enchi seus guardas de bala, ent√£o por que acha que com voc√™ vai ser diferente?", 55000);
 
             textcolor(11);
             textoSequencial("\n\nBOSS: ", 70000);
@@ -1426,7 +1426,7 @@ int main()
             textcolor(11);
             textoSequencial("\n\nASSASSINO: ", 70000);
             textcolor(15);
-            textoSequencial("QUANDO ISSO ACABAR SUA CABE«A ESTARA NO CH√O, BEM LONGE DO RESTO DO SEU CORPO!", 55000);
+            textoSequencial("QUANDO ISSO ACABAR SUA CABE√áA ESTARA NO CH√ÉO, BEM LONGE DO RESTO DO SEU CORPO!", 55000);
 
             textcolor(11);
             textoSequencial("\n\nBOSS: ", 70000);
@@ -1436,7 +1436,7 @@ int main()
         }
 
 
-        textoSequencial("\n\nA BATALHA COME«A!\n\n", 70000);
+        textoSequencial("\n\nA BATALHA COME√áA!\n\n", 70000);
 
         while(vidaP >= 1 && vidaB >= 1)
         {
@@ -1447,7 +1447,7 @@ int main()
             {
                 textcolor(6);
                 textoSequencial("A MORTE BATEU A PORTA... ", 80000);
-                textoSequencial("BOSS EST¡ MORTO!!!\n\nVIT”RIA DO JOGADOR!!!", 100000);
+                textoSequencial("BOSS EST√Å MORTO!!!\n\nVIT√ìRIA DO JOGADOR!!!", 100000);
 
                 textcolor(7);
                 textoSequencial("\n\n<JOGADOR>  SUCESSOS: ", 60000);
@@ -1456,7 +1456,7 @@ int main()
                 textoSequencial("FALHAS: ", 60000);
                 printf("%d ", playerFalha);
                 textoSequencial("  ", 20000);
-                textoSequencial("CRÕTICOS CAUSADOS: ", 60000);
+                textoSequencial("CR√çTICOS CAUSADOS: ", 60000);
                 printf("%d \n\n", playerCritico);
 
                 textoSequencial("<BOSS>     SUCESSOS: ", 60000);
@@ -1465,11 +1465,11 @@ int main()
                 textoSequencial("FALHAS: ", 60000);
                 printf("%d ", bossFalha);
                 textoSequencial("  ", 20000);
-                textoSequencial("CRÕTICOS CAUSADOS: ", 60000);
+                textoSequencial("CR√çTICOS CAUSADOS: ", 60000);
                 printf("%d \n\n", bossCritico);
 
                 textcolor(6);
-                textoSequencial("\n\n\nFIM DE JOGO... \nVERS√O DO JOGO: 2.6\nCriado em linguagem C feito por Gabriel Miguel Haslinger.\n\nencerrando sess„o.", 50000);
+                textoSequencial("\n\n\nFIM DE JOGO... \nVERS√ÉO DO JOGO: 2.6\nCriado em linguagem C feito por Gabriel Miguel Haslinger.\n\nencerrando sess√£o.", 50000);
 
                 return 0;
             }
@@ -1482,7 +1482,7 @@ int main()
             {
                 textcolor(6);
                 textoSequencial("A MORTE BATEU A PORTA... ", 80000);
-                textoSequencial("JOGADOR EST¡ MORTO!!!\n\nVIT”RIA DO BOSS!!!", 100000);
+                textoSequencial("JOGADOR EST√Å MORTO!!!\n\nVIT√ìRIA DO BOSS!!!", 100000);
 
                 textcolor(7);
                 textoSequencial("\n\n<JOGADOR>  SUCESSOS: ", 60000);
@@ -1491,7 +1491,7 @@ int main()
                 textoSequencial("FALHAS: ", 60000);
                 printf("%d ", playerFalha);
                 textoSequencial("  ", 20000);
-                textoSequencial("CRÕTICOS CAUSADOS: ", 60000);
+                textoSequencial("CR√çTICOS CAUSADOS: ", 60000);
                 printf("%d \n\n", playerCritico);
 
                 textoSequencial("<BOSS>     SUCESSOS: ", 60000);
@@ -1500,11 +1500,42 @@ int main()
                 textoSequencial("FALHAS: ", 60000);
                 printf("%d ", bossFalha);
                 textoSequencial("   ", 20000);
-                textoSequencial("CRÕTICOS CAUSADOS: ", 60000);
+                textoSequencial("CR√çTICOS CAUSADOS: ", 60000);
                 printf("%d \n\n", bossCritico);
 
                 textcolor(6);
-                textoSequencial("\n\n\nFIM DE JOGO... \nVERS√O DO JOGO: 2.6\nCriado em linguagem C feito por Gabriel Miguel Haslinger.\n\nencerrando sess„o.", 50000);
+                textoSequencial("\n\n\nFIM DE JOGO... \nVERS√ÉO DO JOGO: 2.6\nCriado em linguagem C feito por Gabriel Miguel Haslinger.\n\nencerrando sess√£o.", 50000);
+
+                return 0;
+            }
+
+            if(vidaB < 1)
+            {
+                textcolor(6);
+                textoSequencial("A MORTE BATEU A PORTA... ", 80000);
+                textoSequencial("BOSS EST√Å MORTO!!!\n\nVIT√ìRIA DO JOGADOR!!!", 100000);
+
+                textcolor(7);
+                textoSequencial("\n\n<JOGADOR>  SUCESSOS: ", 60000);
+                printf("%d ", playerSucesso);
+                textoSequencial("  ", 20000);
+                textoSequencial("FALHAS: ", 60000);
+                printf("%d ", playerFalha);
+                textoSequencial("  ", 20000);
+                textoSequencial("CR√çTICOS CAUSADOS: ", 60000);
+                printf("%d \n\n", playerCritico);
+
+                textoSequencial("<BOSS>     SUCESSOS: ", 60000);
+                printf("%d ", bossSucesso);
+                textoSequencial("  ", 20000);
+                textoSequencial("FALHAS: ", 60000);
+                printf("%d ", bossFalha);
+                textoSequencial("  ", 20000);
+                textoSequencial("CR√çTICOS CAUSADOS: ", 60000);
+                printf("%d \n\n", bossCritico);
+
+                textcolor(6);
+                textoSequencial("\n\n\nFIM DE JOGO... \nVERS√ÉO DO JOGO: 2.6\nCriado em linguagem C feito por Gabriel Miguel Haslinger.\n\nencerrando sess√£o.", 50000);
 
                 return 0;
             }
